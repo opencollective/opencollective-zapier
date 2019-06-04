@@ -4,6 +4,7 @@
 
 const { graphqlRequest } = require('./api');
 const mutations = require('./api/mutations');
+const Samples = require('./samples');
 
 module.exports = {
   /**
@@ -11,6 +12,7 @@ module.exports = {
    */
   createSubscriptionOperation: subscriptionType => {
     return {
+      type: 'hook',
       inputFields: [
         {
           key: 'collectiveSlug',
@@ -48,6 +50,13 @@ module.exports = {
           return result.data.deleteNotification;
         });
       },
+      perform: (z, bundle) => {
+        return [bundle.cleanedRequest];
+      },
+      performList: async () => {
+        return [Samples[subscriptionType]];
+      },
+      sample: Samples[subscriptionType],
     };
   },
 };
