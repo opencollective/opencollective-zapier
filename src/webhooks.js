@@ -48,9 +48,6 @@ module.exports = {
           return result.data.deleteNotification;
         });
       },
-      perform: (z, bundle) => {
-        return [bundle.cleanedRequest];
-      },
     };
   },
 };
