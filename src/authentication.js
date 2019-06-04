@@ -1,4 +1,6 @@
-const { API_URL } = require('./env');
+const { graphqlRequest } = require('./api');
+const { LoggedInUserQuery } = require('./api/queries');
+
 const API_KEY_HEADER = 'Api-Key';
 
 module.exports = {
@@ -21,22 +23,10 @@ module.exports = {
     connectionLabel: (z, bundle) => {
       return bundle.inputData.username;
     },
-    test: (z, bundle) => {
-      const options = {
-        url: API_URL,
-        method: 'POST',
-        headers: {
-          API_KEY_HEADER: bundle.authData[API_KEY_HEADER],
-        },
-        body: {
-          query: '{ LoggedInUser { id username } }',
-        },
-      };
-
-      return z.request(options).then(response => {
+    test: z => {
+      return graphqlRequest(z, LoggedInUserQuery).then(response => {
         response.throwForStatus();
         const result = z.JSON.parse(response.content);
-
         if (result.errors && result.errors.length > 0) {
           throw new Error(`Connection failed: ${result.errors[0].message}`);
         } else if (!result.data.LoggedInUser) {
