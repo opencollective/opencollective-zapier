@@ -1,8 +1,8 @@
-const { Authentication, addApiKeyToHeaders } = require("./src/authentication");
+const { Authentication, addApiKeyToHeaders } = require('./src/authentication');
 
 const App = {
-  version: require("./package.json").version,
-  platformVersion: require("zapier-platform-core").version,
+  version: require('./package.json').version,
+  platformVersion: require('zapier-platform-core').version,
   authentication: Authentication,
   beforeRequest: [addApiKeyToHeaders],
   afterResponse: [],
@@ -17,7 +17,7 @@ const App = {
   searches: {},
 
   // If you want your creates to show up, you better include it here!
-  creates: {}
+  creates: {},
 };
 
 // Finally, export the app.
