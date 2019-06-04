@@ -12,33 +12,28 @@ Make sure you have Node.js version >= 10.
 
 ### Install
 
-1. We recommend cloning the repository in a folder dedicated to `opencollective` projects.
+We recommend cloning the repository in a folder dedicated to `opencollective` projects.
 
 ```
 git clone git@github.com:opencollective/opencollective-zapier.git opencollective/zapier
 cd opencollective/zapier
-
+npm install
 ```
 
-2. Install Zapier cli
+You'll also need to setup an `.env` file following this template:
 
-```bash
-npm install -g zapier-platform-cli
+```env
+# GraphQL API URL
+API_URL=http://localhost:3000/api/graphql
+
+# A user API key used for testing. Get yours on `/applications`
+TEST_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-3. Login
+### Testing
 
-```bash
-zapier login
-```
-
-### Start
-
-TODO
-
-### Tests
-
-TODO
+- Test everything: `npm run test:zapier`
+- Unit tests (jest): `npm run test`
 
 ## Deployment
 

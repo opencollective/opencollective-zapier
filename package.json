@@ -7,17 +7,30 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "lint:quiet": "eslint \"src/**/*.js\" \"test/**/*.js\" --quiet",
+    "pretest": "npm run lint:quiet && npm run prettier:check",
+    "prettier:check": "prettier \"*.@(js|json|md)\" \"src/**/*.@(js|json|md)\" \"test/**/*.@(js|json|md)\" --list-different",
+    "test": "jest --setupFiles dotenv/config",
+    "test:watch": "jest --watch --setupFiles dotenv/config",
+    "test:zapier": "npx zapier test"
   },
   "engines": {
     "node": "8.10.0",
     "npm": ">=5.6.0"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
     "zapier-platform-core": "8.0.1"
   },
   "devDependencies": {
-    "mocha": "^5.2.0",
-    "should": "^13.2.0"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.1",
+    "eslint-config-opencollective": "^1.5.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.17.1"
   }
 }
