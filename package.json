@@ -10,8 +10,8 @@
     "lint:quiet": "eslint \"src/**/*.js\" \"test/**/*.js\" --quiet",
     "pretest": "npm run lint:quiet && npm run prettier:check",
     "prettier:check": "prettier \"*.@(js|json|md)\" \"src/**/*.@(js|json|md)\" \"test/**/*.@(js|json|md)\" --list-different",
-    "test": "jest --setupFiles dotenv/config",
-    "test:watch": "jest --watch --setupFiles dotenv/config",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "test:zapier": "npx zapier test"
   },
   "engines": {
@@ -19,7 +19,6 @@
     "npm": ">=5.6.0"
   },
   "dependencies": {
-    "dotenv": "^8.0.0",
     "graphql": "14.3.1",
     "graphql-tag": "2.10.1",
     "zapier-platform-core": "8.0.1"

@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('zapier-platform-core').tools.env.inject();
 
 module.exports = {
   /** GraphQL API URL */

@@ -1,4 +1,5 @@
 const { Authentication, addApiKeyToHeaders } = require('./src/authentication');
+const triggers = require('./src/triggers');
 
 const App = {
   version: require('./package.json').version,
@@ -11,7 +12,7 @@ const App = {
   resources: {},
 
   // If you want your trigger to show up, you better include it here!
-  triggers: {},
+  triggers: triggers,
 
   // If you want your searches to show up, you better include it here!
   searches: {},
