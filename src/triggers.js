@@ -17,7 +17,7 @@ module.exports = {
     key: 'newUpdate',
     noun: 'Update',
     display: {
-      label: 'New Update',
+      label: 'New Update Published',
       description: 'Triggers when a new update is published',
     },
     operation: Webhooks.createSubscriptionOperation(
