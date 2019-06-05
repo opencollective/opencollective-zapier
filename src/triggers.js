@@ -1,4 +1,4 @@
-const NotificationsTypes = require('./constants/notifications_types');
+const NotificationsTypes = require('./notifications_types');
 const Webhooks = require('./webhooks');
 
 module.exports = {

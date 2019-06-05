@@ -1,5 +1,9 @@
 # Open Collective - Zapier Integration
 
+A Zapier integration for Open Collective, still in **invite only** mode,
+visit [this invite link](https://zapier.com/developer/public-invite/21484/63399c65bb01d75e00fe091ae7f58683/)
+to try it.
+
 ## Foreword
 
 If you see a step below that could be improved (or is outdated), please update the instructions. We rarely go through this process ourselves, so your fresh pair of eyes and your recent experience with it, makes you the best candidate to improve them for other users. Thank you!
@@ -29,6 +33,14 @@ API_URL=http://localhost:3000/api/graphql
 # A user API key used for testing. Get yours on `/applications`
 TEST_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
+
+### Adding a new trigger
+
+1. Add the notification type in `src/notifications_types.js`
+2. Add sample data for this notification type in `src/samples.js`
+3. Define the trigger in `src/triggers.js`
+
+The trigger subscribe/unsubscribe/sample will be automatically tested by `test/index.test.js`.
 
 ### Testing
 
