@@ -49,4 +49,32 @@ The trigger subscribe/unsubscribe/sample will be automatically tested by `test/i
 
 ## Deployment
 
-TODO
+We have some helpers ready to help with the common tasks. For more
+advanced operations (deprecating a version, migrating users...etc)
+check the official Zapier documentation: https://zapier.github.io/zapier-platform-cli/cli.html
+
+- To deploy on `staging`:
+
+This will push with version `0.42.0`, a special (private) version
+dedicated to staging.
+
+```bash
+npm run deploy:staging
+```
+
+- To deploy on `production`
+
+This command will also bump the version.
+
+```bash
+npm run deploy:production
+```
+
+- To publish an app as the default
+
+This will replace the default Open Collective app version.
+**Never** run this command with a staging version!
+
+```bash
+npm run publish [version]
+```
