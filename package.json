@@ -7,9 +7,9 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "deploy:staging": "ENV=staging API_URL=https://staging.opencollective.com/api/graphql npm run zapier push",
-    "deploy:production": "npm run version minor && ENV=production npm run zapier push",
-    "publish": "npm run zapier publish",
+    "deploy:production": "./scripts/deploy.sh production",
+    "deploy:staging": "./scripts/deploy.sh staging",
+    "publish": "npm run zapier promote",
     "lint:quiet": "eslint \"src/**/*.js\" \"test/**/*.js\" --quiet",
     "pretest": "npm run test:code-style",
     "prettier:check": "prettier \"*.@(js|json|md)\" \"src/**/*.@(js|json|md)\" \"test/**/*.@(js|json|md)\" --list-different",
