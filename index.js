@@ -1,13 +1,8 @@
 const { Authentication, addApiKeyToHeaders } = require('./src/authentication');
 const triggers = require('./src/triggers');
-const { ENV } = require('./src/env');
-const { version } = require('./package.json');
-
-// A specific version dedicated to staging
-const STAGING_VERSION = '0.42.0';
 
 const App = {
-  version: ENV === 'staging' ? STAGING_VERSION : version,
+  version: require('./package.json').version,
   platformVersion: require('zapier-platform-core').version,
   authentication: Authentication,
   beforeRequest: [addApiKeyToHeaders],

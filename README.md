@@ -53,10 +53,11 @@ We have some helpers ready to help with the common tasks. For more
 advanced operations (deprecating a version, migrating users...etc)
 check the official Zapier documentation: https://zapier.github.io/zapier-platform-cli/cli.html
 
-- To deploy on `staging`:
+Before deploying a new version, don't forget to run
+`npm version patch|minor|major`, otherwhise you'll overwrite the
+previous version
 
-This will push with version `0.42.0`, a special (private) version
-dedicated to staging.
+- To deploy on `staging`:
 
 ```bash
 npm run deploy:staging
