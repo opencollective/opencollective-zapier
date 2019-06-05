@@ -2,7 +2,7 @@
  * Samples objects as sent by the API.
  */
 
-const NotificationsTypes = require('./constants/notifications_types');
+const NotificationsTypes = require('./notifications_types');
 
 module.exports = {
   [NotificationsTypes.EXPENSE_CREATED]: {
