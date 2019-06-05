@@ -7,14 +7,15 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test:code-style": "npm run lint:quiet && npm run prettier:check",
+    "deploy:staging": "ENV=staging API_URL=https://staging.opencollective.com/api/graphql npm run zapier push",
+    "deploy:production": "npm run version minor && ENV=production npm run zapier push",
+    "publish": "npm run zapier publish",
     "lint:quiet": "eslint \"src/**/*.js\" \"test/**/*.js\" --quiet",
     "pretest": "npm run test:code-style",
     "prettier:check": "prettier \"*.@(js|json|md)\" \"src/**/*.@(js|json|md)\" \"test/**/*.@(js|json|md)\" --list-different",
     "test": "jest",
+    "test:code-style": "npm run lint:quiet && npm run prettier:check",
     "test:watch": "jest --watch",
-    "deploy:staging": "npm run version minor && npm run zapier publish",
-    "deploy:production": "echo Not implemented yet",
     "zapier": "./node_modules/zapier-platform-cli/zapier.js",
     "zapier:test": "npm run zapier test",
     "zapier:validate": "npm run zapier validate"
