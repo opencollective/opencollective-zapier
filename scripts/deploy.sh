@@ -20,6 +20,9 @@ else
   exit 1
 fi
 
+# Call pre-deploy so user confirm and we notify slack
+./scripts/pre-deploy.sh "$1" "$APP_ID" || exit 0
+
 # Generate `.zapierapprc` file
 
 echo "🔗  Linking App${APP_ID} ($1)"
