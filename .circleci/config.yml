@@ -35,7 +35,10 @@ jobs:
       NODE_ENV: circleci
     steps:
       - checkout
-      - run: npx zapier validate
+      - <<: *restore_npm_cache
+      - run: npm ci
+      - <<: *persist_npm_cache
+      - run: npm run zapier:validate
 
 workflows:
   version: 2

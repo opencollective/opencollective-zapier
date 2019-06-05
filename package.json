@@ -7,12 +7,17 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "test:code-style": "npm run lint:quiet && npm run prettier:check",
     "lint:quiet": "eslint \"src/**/*.js\" \"test/**/*.js\" --quiet",
-    "pretest": "npm run lint:quiet && npm run prettier:check",
+    "pretest": "npm run test:code-style",
     "prettier:check": "prettier \"*.@(js|json|md)\" \"src/**/*.@(js|json|md)\" \"test/**/*.@(js|json|md)\" --list-different",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:zapier": "npx zapier test"
+    "deploy:staging": "npm run version minor && npm run zapier publish",
+    "deploy:production": "echo Not implemented yet",
+    "zapier": "./node_modules/zapier-platform-cli/zapier.js",
+    "zapier:test": "npm run zapier test",
+    "zapier:validate": "npm run zapier validate"
   },
   "engines": {
     "node": "8.10.0",
@@ -33,6 +38,7 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-react": "^7.13.0",
     "jest": "^24.8.0",
-    "prettier": "^1.17.1"
+    "prettier": "^1.17.1",
+    "zapier-platform-cli": "^8.1.0"
   }
 }
