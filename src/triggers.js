@@ -13,6 +13,17 @@ module.exports = {
       NotificationsTypes.EXPENSE_CREATED,
     ),
   },
+  newMember: {
+    key: 'newMember',
+    noun: 'Member',
+    display: {
+      label: 'New Member',
+      description: 'Triggers when a new member is created',
+    },
+    operation: Webhooks.createSubscriptionOperation(
+      NotificationsTypes.MEMBER_CREATED,
+    ),
+  },
   newUpdate: {
     key: 'newUpdate',
     noun: 'Update',
