@@ -25,7 +25,7 @@
     "npm": ">=5.6.0"
   },
   "dependencies": {
-    "cross-fetch": "^3.0.3",
+    "cross-fetch": "^3.0.4",
     "graphql": "14.3.1",
     "graphql-tag": "2.10.1",
     "zapier-platform-core": "8.1.0"
