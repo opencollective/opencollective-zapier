@@ -26,6 +26,38 @@ module.exports = {
       },
     },
   },
+  [NotificationsTypes.MEMBER_CREATED]: {
+    createdAt: '2019-06-04T19:15:30.364Z',
+    id: 71360,
+    type: 'collective.member.created',
+    CollectiveId: 10885,
+    data: {
+      member: {
+        role: 'BACKER',
+        description: null,
+        since: '2019-06-09T16:24:55.336Z',
+        memberCollective: {
+          id: 10889,
+          type: 'USER',
+          slug: 'frank-zappa',
+          name: 'Frank Zappa',
+          company: null,
+          website: null,
+          twitterHandle: null,
+          githubHandle: null,
+          description: null,
+          previewImage:
+            'https://res.cloudinary.com/opencollective/image/fetch/c_thumb,g_face,h_48,r_max,w_48,bo_3px_solid_white/c_thumb,h_48,r_max,w_48,bo_2px_solid_rgb:66C71A/e_trim/f_jpg/https%3A%2F%2Fwww.gravatar.com%2Favatar%2F1dc9505a6fb275e6c2d4685112620e6c%3Fdefault%3D404',
+        },
+      },
+      order: {
+        id: 6337,
+        totalAmount: 1000,
+        currency: 'USD',
+        description: 'Monthly donation to Open Source Collective (Members)',
+      },
+    },
+  },
   [NotificationsTypes.UPDATE_PUBLISHED]: {
     createdAt: '2019-06-04T19:47:44.206Z',
     id: 71361,
