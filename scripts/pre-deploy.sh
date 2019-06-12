@@ -78,8 +78,9 @@ fi
 read -d '' PAYLOAD << EOF
   {
     "channel": "${SLACK_CHANNEL}",
-    "text": "🍻️ Deploying *Zapier App* to *${1}* (https://zapier.com/app/developer/app/${2}) ${CUSTOM_MESSAGE}",
-    "as_user": true
+    "text": "🍻️ Deploying *Zapier App* to *${1}* ${CUSTOM_MESSAGE}\\\n> https://zapier.com/app/developer/app/${2}",
+    "as_user": true,
+    "unfurl_media": false
   }
 EOF
 
