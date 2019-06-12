@@ -29,7 +29,7 @@ module.exports = {
   [NotificationsTypes.MEMBER_CREATED]: {
     createdAt: '2019-06-04T19:15:30.364Z',
     id: 71360,
-    type: 'collective.expense.created',
+    type: 'collective.member.created',
     CollectiveId: 10885,
     data: {
       member: {
