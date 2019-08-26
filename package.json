@@ -31,7 +31,7 @@
     "zapier-platform-core": "8.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.3",
     "eslint": "^5.14.1",
     "eslint-config-opencollective": "^2.0.0",
     "eslint-plugin-babel": "^5.3.0",
