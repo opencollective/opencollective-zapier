@@ -7,7 +7,7 @@ module.exports = {
     noun: 'Expense',
     display: {
       label: 'New Expense',
-      description: 'Triggers when a new expense is created',
+      description: 'Triggers when a new expense is created.',
     },
     operation: Webhooks.createSubscriptionOperation(
       NotificationsTypes.EXPENSE_CREATED,
@@ -18,7 +18,7 @@ module.exports = {
     noun: 'Member',
     display: {
       label: 'New Member',
-      description: 'Triggers when a new member is created',
+      description: 'Triggers when a new member is created.',
     },
     operation: Webhooks.createSubscriptionOperation(
       NotificationsTypes.MEMBER_CREATED,
@@ -29,7 +29,7 @@ module.exports = {
     noun: 'Update',
     display: {
       label: 'New Update Published',
-      description: 'Triggers when a new update is published',
+      description: 'Triggers when a new update is published.',
     },
     operation: Webhooks.createSubscriptionOperation(
       NotificationsTypes.UPDATE_PUBLISHED,
