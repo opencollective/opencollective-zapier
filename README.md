@@ -1,3 +1,5 @@
+⚠️ DEPRECATED ⚠️ See https://github.com/opencollective/opencollective/issues/3236
+
 # Open Collective - Zapier Integration
 
 A Zapier integration for Open Collective, still in **invite only** mode,
