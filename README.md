@@ -2,9 +2,7 @@
 
 # Open Collective - Zapier Integration
 
-A Zapier integration for Open Collective, still in **invite only** mode,
-visit [this invite link](https://zapier.com/developer/public-invite/21484/63399c65bb01d75e00fe091ae7f58683/)
-to try it.
+A Zapier integration for Open Collective.
 
 ## Foreword
 
